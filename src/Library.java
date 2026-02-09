@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-
+    private String name;
     private ArrayList<Document> documents;
     private int documentCount;
     private String library;
 
-    public Library(){
+    public Library(String name){
         documents = new ArrayList<>();
 
     }

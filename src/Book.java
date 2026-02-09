@@ -6,9 +6,9 @@ public class Book extends Document {
     int ISBN;
     int nbPages;
 
-    public Book(String id, int idBook, String title, int nbPages, int borrowPeriod, boolean isBorrowed, Date date){
+    public Book(String id, int ISBN, String title, int nbPages, int borrowPeriod, boolean isBorrowed, LocalDate date){
         super(id,title, borrowPeriod, isBorrowed, date);
-        this.ISBN= idBook;
+        this.ISBN= ISBN;
         this.nbPages = nbPages;
     }
 
