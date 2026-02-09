@@ -92,13 +92,16 @@ public class Library {
 //    }
 
     public List<Document> getOverdueDocument() {
-        return documents.stream().filter(document -> ChronoUnit.DAYS.between(document.getDateEmprunt(), LocalDate.now()) >= document.getBorrowPeriod()).toList();
+        return documents.stream().filter(document -> ChronoUnit.DAYS.between(document.getDateEmprunt(), LocalDate.now()) > document.getBorrowPeriod()).toList();
     }
 
-    public double calculateTotalLateFees() {
-        // TODO
-        return 1;
-    }
+//    public double calculateTotalLateFees() {
+//        double fees=2;
+//        if (documents.forEach(document -> ChronoUnit.DAYS.between(document.getDateEmprunt(), LocalDate.now()) > document.getBorrowPeriod())){
+//            return 1;
+//        }
+//        return fees+=fees;
+//    }
 
 
     public void displayAllDocuments() {
