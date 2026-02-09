@@ -1,5 +1,8 @@
 import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Library {
 
@@ -44,8 +47,8 @@ public class Library {
 //        return availableDocs;
 //    }
 
-    public ArrayList<Document> getAvailableDocuments2(){
-        return new ArrayList<>(documents.stream().filter(document -> !document.getStatus()).toList());
+    public List<Document> getAvailableDocuments2(){
+        return documents.stream().filter(document -> !document.getStatus()).toList();
     }
 
 
@@ -63,8 +66,8 @@ public class Library {
 //        return documentType;
 //    }
 
-    public ArrayList<Document> getDocumentsByType(String type){
-        return new ArrayList<>(documents.stream().filter(document -> document.getDocumentType().equals(type)).toList());
+    public List<Document> getDocumentsByType(String type){
+        return documents.stream().filter(document -> document.getDocumentType().equals(type)).toList();
     }
 
 
@@ -80,16 +83,21 @@ public class Library {
 //    }
 
 
-    public ArrayList<Document> getOverdueDocument() {
-        ArrayList<Document> documentType = new ArrayList<>();
-        for (int i=0; i<documents.size(); i++){
-            if (documents.get(i).getDateEmprunt() )
+//    public ArrayList<Document> getOverdueDocument() {
+//        ArrayList<Document> documentType = new ArrayList<>();
+//        for (int i=0; i<documents.size(); i++){
+//            if (documents.get(i).getDateEmprunt() )
+//
+//        }
+//    }
 
-        }
+    public List<Document> getOverdueDocument() {
+        return documents.stream().filter(document -> ChronoUnit.DAYS.between(document.getDateEmprunt(), LocalDate.now()) >= document.getBorrowPeriod()).toList();
     }
 
     public double calculateTotalLateFees() {
-
+        // TODO
+        return 1;
     }
 
 
