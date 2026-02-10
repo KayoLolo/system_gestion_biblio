@@ -16,11 +16,9 @@ public class Library {
     }
 
     public void addDocument(Document doc){
-        for (int i = 0; i<documents.size(); i++){
             if (doc!=null){
                 documents.add(doc);
             }
-        }
     }
 
 
@@ -34,6 +32,8 @@ public class Library {
             }
         }
     }
+
+
 
 
 
@@ -105,8 +105,8 @@ public class Library {
 
 
     public void displayAllDocuments() {
-        for (int i = 0; i < documentCount; i++) {
-            documents.get(i).displayInfo(); // Polymorphisme !
+        for (int i = 0; i < documents.size(); i++) {
+            documents.get(i).displayInfo();
         }
     }
 

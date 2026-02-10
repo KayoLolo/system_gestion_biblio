@@ -29,13 +29,25 @@ public abstract class Document {
         return title;
     }
 
-    public void borrow(){
+    public void borrowDocument(){
         if (isBorrowed){
             System.out.println("The document is already borrowed");
         }else{
             isBorrowed = true;
         }
     }
+
+    public void returnDocument(){
+        if (isBorrowed){
+            System.out.println("The document has been returned");
+            isBorrowed = false;
+        }else{
+            System.out.println("The document is already available");
+        }
+
+    }
+
+
 
     public boolean getStatus(){
         return isBorrowed;

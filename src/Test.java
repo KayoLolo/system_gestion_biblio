@@ -14,12 +14,19 @@ public class Test {
         AudioBook audBook1 = new AudioBook("7", "audBook 1", 20, "nar 1", 14, true, LocalDate.of(2026, 1, 1));
 
         book2.displayInfo();
-        book2.borrow();
+        book2.borrowDocument();
         book2.displayInfo();
         System.out.println("----------");
         book1.displayInfo();
-        book1.borrow();
+        book1.borrowDocument();
+        System.out.println("----------");
+        book1.returnDocument();
+        book1.displayInfo();
         System.out.println(book2);
+        System.out.println("----------");
+        centralLib.addDocument(book2);
+        centralLib.addDocument(book1);
+        centralLib.displayAllDocuments();
 
 
 
