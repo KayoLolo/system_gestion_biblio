@@ -17,7 +17,7 @@ public abstract class Document {
 
     }
 
-    public LocalDate getDateEmprunt(){
+    public LocalDate getDate(){
         return date;
     }
 
@@ -29,6 +29,13 @@ public abstract class Document {
         return title;
     }
 
+    public void borrow(){
+        if (isBorrowed){
+            System.out.println("The document is already borrowed");
+        }else{
+            isBorrowed = true;
+        }
+    }
 
     public boolean getStatus(){
         return isBorrowed;

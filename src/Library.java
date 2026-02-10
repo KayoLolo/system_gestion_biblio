@@ -92,7 +92,7 @@ public class Library {
 //    }
 
     public List<Document> getOverdueDocument() {
-        return documents.stream().filter(document -> ChronoUnit.DAYS.between(document.getDateEmprunt(), LocalDate.now()) > document.getBorrowPeriod()).toList();
+        return documents.stream().filter(document -> ChronoUnit.DAYS.between(document.getDate(), LocalDate.now()) > document.getBorrowPeriod()).toList();
     }
 
 //    public double calculateTotalLateFees() {
