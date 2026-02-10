@@ -32,9 +32,9 @@ public class AudioBook extends Document{
         System.out.println("Duration : "+duration);
         System.out.println("Narrator : "+narrator);
         if (isBorrowed){
-            System.out.println("Status : Available");
-        }else {
             System.out.println("Status : Unavailable");
+        }else {
+            System.out.println("Status : Available");
         }
     }
 

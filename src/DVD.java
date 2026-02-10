@@ -33,9 +33,9 @@ public class DVD extends Document{
         System.out.println("Duration : "+duration);
         System.out.println("Classification : "+ageClassification);
         if (isBorrowed){
-            System.out.println("Status : Available");
-        }else {
             System.out.println("Status : Unavailable");
+        }else {
+            System.out.println("Status : Available");
         }
     }
 

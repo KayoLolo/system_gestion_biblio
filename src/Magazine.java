@@ -35,9 +35,9 @@ public class Magazine extends Document{
         System.out.println("Edition number: "+editNum);
         System.out.println("Edition frequency : "+editFreq);
         if (isBorrowed){
-            System.out.println("Status : Available");
-        }else {
             System.out.println("Status : Unavailable");
+        }else {
+            System.out.println("Status : Available");
         }
     }
 }

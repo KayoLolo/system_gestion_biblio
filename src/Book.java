@@ -26,9 +26,9 @@ public class Book extends Document {
         System.out.println("Pages : "+nbPages);
         System.out.println("Max borrow period : "+borrowPeriod);
         if (isBorrowed){
-            System.out.println("Status : Available");
-        }else {
             System.out.println("Status : Unavailable");
+        }else {
+            System.out.println("Status : Available");
         }
     }
 

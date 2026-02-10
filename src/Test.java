@@ -13,6 +13,14 @@ public class Test {
         DVD dvd2 = new DVD("6", "dvd 2",80, 12, 5, false, LocalDate.of(2026, 1, 1));
         AudioBook audBook1 = new AudioBook("7", "audBook 1", 20, "nar 1", 14, true, LocalDate.of(2026, 1, 1));
 
+        book2.displayInfo();
+        book2.borrow();
+        book2.displayInfo();
+        System.out.println("----------");
+        book1.displayInfo();
+        book1.borrow();
+        System.out.println(book2);
+
 
 
     }
