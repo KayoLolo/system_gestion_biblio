@@ -47,7 +47,7 @@ public class Library {
 //        return availableDocs;
 //    }
 
-    public List<Document> getAvailableDocuments2(){
+    public List<Document> getAvailableDocuments(){
         return documents.stream().filter(document -> !document.getStatus()).toList();
     }
 
@@ -80,7 +80,7 @@ public class Library {
 //    }
 
     public List<Document> getDocumentsByType(String type){
-        return documents.stream().filter(document -> document.getDocumentType().trim().equalsIgnoreCase(type.trim())).toList();
+        return documents.stream().filter(document -> document.getDocumentType().equalsIgnoreCase(type)).toList();
     }
 
 
@@ -118,8 +118,10 @@ public class Library {
 
 
     public void displayAllDocuments() {
-        for (int i = 0; i < documents.size(); i++) {
-            documents.get(i).displayInfo();
+        //for (int i = 0; i < documents.size(); i++) {
+        for (Document document: documents){
+            System.out.println("_________");
+            document.displayInfo();
         }
     }
 

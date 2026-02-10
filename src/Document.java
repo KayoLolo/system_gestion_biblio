@@ -21,6 +21,10 @@ public abstract class Document {
         return date;
     }
 
+    public void setDateBorrow(LocalDate newDate){
+         this.date = newDate;
+    }
+
     public String getId(){
         return id;
     }

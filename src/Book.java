@@ -30,6 +30,7 @@ public class Book extends Document {
         }else {
             System.out.println("Status : Available");
         }
+        System.out.println(getDate());
     }
 
     public int getBorrowPeriod() {
@@ -40,6 +41,6 @@ public class Book extends Document {
     }
 
     public String  getDocumentType(){
-        return "AudioBook";
+        return "Book";
     }
 }

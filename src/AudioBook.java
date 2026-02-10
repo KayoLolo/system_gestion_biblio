@@ -23,7 +23,7 @@ public class AudioBook extends Document{
         return 14;
     }
     public String  getDocumentType(){
-        return "AudioBook";
+        return "Audio Book";
     }
 
     public void displayInfo(){
