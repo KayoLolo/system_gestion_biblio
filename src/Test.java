@@ -27,6 +27,9 @@ public class Test {
         centralLib.addDocument(book2);
         centralLib.addDocument(book1);
         centralLib.displayAllDocuments();
+        System.out.println("----------");
+        System.out.println(centralLib.findDocument("book 1"));
+        System.out.println(centralLib.getDocumentsByType("book"));
 
 
 

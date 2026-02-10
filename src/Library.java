@@ -6,12 +6,12 @@ import java.util.List;
 
 public class Library {
     private String name;
-    private ArrayList<Document> documents;
+    protected ArrayList<Document> documents;
     private int documentCount;
     private String library;
 
     public Library(String name){
-        documents = new ArrayList<>();
+        this.documents = new ArrayList<>();
 
     }
 
@@ -66,8 +66,21 @@ public class Library {
 //        return documentType;
 //    }
 
+
+//    public ArrayList<Document> getDocumentsByType2(String type) {
+//        ArrayList<Document> documentType = new ArrayList<>();
+//        for (int i=0; i<documents.size(); i++){
+//            if (documents.get(i).getDocumentType().equals(type) ){
+//                documentType.add(documents.get(i));
+//
+//            }
+//
+//        }
+//        return documentType;
+//    }
+
     public List<Document> getDocumentsByType(String type){
-        return documents.stream().filter(document -> document.getDocumentType().equals(type)).toList();
+        return documents.stream().filter(document -> document.getDocumentType().trim().equalsIgnoreCase(type.trim())).toList();
     }
 
 
@@ -111,8 +124,8 @@ public class Library {
     }
 
 
-    public ArrayList<Document> findDocument(String title) {
-        return new ArrayList<>(documents.stream().filter(document -> document.getTitle().equals(title)).toList());
+    public List<Document> findDocument(String title) {
+        return documents.stream().filter(document -> document.getTitle().equalsIgnoreCase(title)).toList();
     }
 
 
